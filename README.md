@@ -1,0 +1,16 @@
+# PLFA exercises
+
+My answers to the exercises in the book [Programming Language Foundations in Agda](https://plfa.github.io).
+
+## part1
+
+1.  [x] Naturals
+2.  [x] Induction
+3.  [ ] Relations
+4.  [ ] Equality
+5.  [ ] Isomorphism
+6.  [ ] Connectives
+7.  [ ] Negation
+8.  [ ] Quantifiers
+9.  [ ] Decidable
+10. [ ] Lists
