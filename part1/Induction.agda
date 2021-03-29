@@ -101,7 +101,7 @@ open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _^_)
 
 -- Bin Laws
 data Bin : Set where
-  ⟨⟩ : Bin
+  ⟨⟩  : Bin
   _O : Bin → Bin
   _I : Bin → Bin
 
@@ -119,23 +119,23 @@ from ⟨⟩ = zero
 from (x O) = 2 * (from x)
 from (x I) = 2 * (from x) + 1
 
-bin-inc-suc : ∀ (b : Bin) → from (inc b) ≡ suc (from b)
-bin-inc-suc ⟨⟩ = refl
-bin-inc-suc (b O)
+Bin-inc-suc : ∀ (b : Bin) → from (inc b) ≡ suc (from b)
+Bin-inc-suc ⟨⟩ = refl
+Bin-inc-suc (b O)
   rewrite +-identity (from b)
         | +-comm (from b + from b) 1 = refl
-bin-inc-suc (b I)
-  rewrite bin-inc-suc b
+Bin-inc-suc (b I)
+  rewrite Bin-inc-suc b
         | +-identity (from b)
         | +-assoc (from b) (from b) 1
         | +-suc (from b) zero
         | +-identity (from b)
   = refl
 
-bin-inv-from-to : ∀ (n : ℕ) → from (to n) ≡ n
-bin-inv-from-to zero = refl
-bin-inv-from-to (suc n)
-  rewrite bin-inc-suc (to n) = cong suc (bin-inv-from-to n)
+Bin-inv-from-to : ∀ (n : ℕ) → from (to n) ≡ n
+Bin-inv-from-to zero = refl
+Bin-inv-from-to (suc n)
+  rewrite Bin-inc-suc (to n) = cong suc (Bin-inv-from-to n)
 
-bin-cex-inv-to-from : to (from ⟨⟩) ≡ ⟨⟩ O
-bin-cex-inv-to-from = begin to (from ⟨⟩) ≡⟨⟩ to 0 ≡⟨⟩ ⟨⟩ O ∎
+Bin-cex-inv-to-from : to (from ⟨⟩) ≡ ⟨⟩ O
+Bin-cex-inv-to-from = begin to (from ⟨⟩) ≡⟨⟩ to 0 ≡⟨⟩ ⟨⟩ O ∎

@@ -131,29 +131,11 @@ inc ⟨⟩ = ⟨⟩ I
 inc (m O) = m I
 inc (m I) = (inc m) O
 
-from : ℕ → Bin
-from zero = ⟨⟩ O
-from (suc n) = inc (from n)
+to : ℕ → Bin
+to zero = ⟨⟩ O
+to (suc n) = inc (to n)
 
-to : Bin → ℕ
-to ⟨⟩ = zero
-to (x O) = 2 * (to x)
-to (x I) = 2 * (to x) + 1
-
-_ : from 11 ≡ ⟨⟩ I O I I
-_ = refl
-
-_ : to (⟨⟩ I O I I) ≡ 11
-_ = refl
-
-_ : inc (⟨⟩ I) ≡ ⟨⟩ I O
-_ = begin
-  inc (⟨⟩ I)
-  ≡⟨⟩
-  (inc ⟨⟩) O
-  ≡⟨⟩
-  ⟨⟩ I O
-  ∎
-
-_ : inc (⟨⟩ I O I I) ≡ ⟨⟩ I I O O
-_ = refl
+from : Bin → ℕ
+from ⟨⟩ = zero
+from (x O) = 2 * (from x)
+from (x I) = 2 * (from x) + 1
