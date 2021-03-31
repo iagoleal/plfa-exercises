@@ -7,7 +7,7 @@ My answers to the exercises in the book [Programming Language Foundations in Agd
 1.  [x] Naturals
 2.  [x] Induction
 3.  [ ] Relations
-4.  [ ] Equality
+4.  [x] Equality
 5.  [ ] Isomorphism
 6.  [ ] Connectives
 7.  [ ] Negation
