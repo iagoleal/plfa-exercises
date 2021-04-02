@@ -9,7 +9,7 @@ My answers to the exercises in the book [Programming Language Foundations in Agd
 3.  [ ] Relations
 4.  [x] Equality
 5.  [x] Isomorphism
-6.  [ ] Connectives
+6.  [x] Connectives
 7.  [ ] Negation
 8.  [ ] Quantifiers
 9.  [ ] Decidable
