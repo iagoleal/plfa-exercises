@@ -2,8 +2,7 @@
 
 My answers to the exercises in the book [Programming Language Foundations in Agda](https://plfa.github.io).
 
-If a chapter marked as "(partial)",
-it means I've completed all the exercises but one or two.
+A "(partial)" mark means that I've completed all the exercises but one or two on that chapter.
 
 ## part1
 
@@ -15,5 +14,5 @@ it means I've completed all the exercises but one or two.
 6.  [x] Connectives
 7.  [ ] Negation (partial)
 8.  [ ] Quantifiers (partial)
-9.  [ ] Decidable
+9.  [x] Decidable
 10. [ ] Lists
